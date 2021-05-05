@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Dosis', sans-serif;
+}
+
+:root {
+    --gold: rgb(221, 182, 52);
+    --maroon: rgb(113, 2, 2);
+    
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #fff;
+    /* background-color: rgb(250, 245, 237); */
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    height: 120px;
+    width: 100%;
+    background-color: #f7c7d2;
+    z-index: 2;
+    overflow: hidden;
+}
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 0;
+    height: 120px;
+    width: 100%;
+    background-color: #f7c7d2;
+    z-index: 2;
+    overflow: hidden;
+    margin-top: 50px;
+}
+
+a #init {
+    width: 0px;
+}
+#init {
+    font-family: 'Arizonia', cursive;
+    margin-left: 100px;
+    margin-top: 4vh;
+    font-size: 50px;
+    color: var(--gold);
+    text-decoration: 2px underline;
+    position: relative;
+    z-index: 3;
+}
+
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+li:hover {
+    color: white;
+}
+
+li {
+    display: inline;
+    font-family: 'Dosis', sans-serif;
+    font-size: 2rem;
+    padding: 10px;
+    color: rgb(97, 92, 92);
+}
+
+main {
+    margin-top: 20px;
+}
+
+#hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 65vh;
+    min-height: 350px;
+    overflow: hidden;
+    background-image: url('./assets/joanna-kosinska-I3adKpDNAjM-unsplash.jpg') ;
+    background-size: 100%;
+}
+#title {
+    position: absolute;
+    display: flex;
+    flex-direction: column;  
+    justify-content: center;
+    align-items: center;  
+    margin-top: 10vh;
+    z-index: 2;
+    color: rgb(113, 2, 2);
+}
+#title h1 {
+    font-size: 65px;
+    text-align: center;
+}
+#title h2 {
+    font-size: 35px;
+    padding: 10px;
+}
+#title h3 {
+    font-size: 25px;
+}
+
+#cover {
+    width: 100%;
+    height: 65vh;
+    min-height: 350px;
+    background-color: rgba(221, 197, 210, 0.5);
+    z-index: 1;
+}
+
+#arrow {
+    position: relative;
+    z-index: 2;
+    color: var(--maroon);
+    font-size: 60px;
+    margin-top: 10vh;
+    padding-right: 10px;
+}
+
+/* At 800px or less */
+@media only screen and (max-width: 800px) {
+    #init, ol li {
+        visibility: hidden;
+    }
+  }
+/*  ------------------------------ */
+
+.carousel-indicators li{
+    background-color: rgb(170, 152, 152);
+}
+.container {
+    width: 40%;
+}
+.item {
+    width: 100%;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: rgb(250, 245, 237);
+    margin-top: 30px;
+    margin-bottom: 6%;
+    padding: 25px;
+}
+
+ol li {
+    font-size: 5px;
+}
+
+h1, h2 {
+    color: var(--maroon);
+}
+.sections {
+    margin-top: 6%;
+    margin-left: 5%;
+}
+
+.links:hover {
+    color: var(--gold);
+}
