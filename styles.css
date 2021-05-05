@@ -4,7 +4,6 @@
     box-sizing: border-box;
     font-family: 'Dosis', sans-serif;
 }
-
 :root {
     --gold: rgb(221, 182, 52);
     --maroon: rgb(113, 2, 2);
@@ -12,11 +11,9 @@
     --grey: rgb(97, 92, 92);
     
 }
-
 html {
     scroll-behavior: smooth;
 }
-
 body {
     background-color: #fff;
 }
@@ -26,6 +23,7 @@ nav {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    text-align: center;
     position: absolute;
     top: 0;
     height: 120px;
@@ -76,6 +74,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     width: 100%;
     height: 65vh;
     min-height: 350px;
@@ -105,6 +104,15 @@ main {
     font-size: 25px;
 }
 
+#arrow {
+    position: relative;
+    z-index: 2;
+    color: var(--maroon);
+    font-size: 60px;
+    margin-top: 5vh;
+    padding-right: 10px;
+}
+
 #cover {
     width: 100%;
     height: 65vh;
@@ -113,20 +121,18 @@ main {
     z-index: 1;
 }
 
-#arrow {
-    position: relative;
-    z-index: 2;
-    color: var(--maroon);
-    font-size: 60px;
-    margin-top: 10vh;
-    padding-right: 10px;
-}
-
-
-
 /* At 800px or less */
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 805px) {
     #init, ol li {
+        visibility: hidden;
+    }
+    .handles {
+        display: flex;
+        flex-direction: column;
+    }
+  }
+  @media only screen and (max-width: 370px) {
+    #arrow {
         visibility: hidden;
     }
   }
@@ -136,7 +142,8 @@ main {
 
 
 .container {
-    width: 40%;
+    width: 50%;
+    min-width: 220px;
 }
 .item {
     width: 100%;
@@ -253,14 +260,24 @@ textarea {
 
 /* ------------------------------------------- */
 
+#mail {
+    color: var(--maroon);
+    font-size: 200px;
+}
+#mail:hover {
+    cursor: pointer;
+    color: var(--gold);
+}
+
 /* Footer  */
 
 footer {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
+    text-align: center;
     bottom: 0;
     height: 120px;
     width: 100%;
@@ -269,4 +286,17 @@ footer {
     font-size: 1.3em;
     overflow: hidden;
     margin-top: 50px;
+}
+footer p {
+    margin-left: 2%;
+    margin-right: 2%;
+}
+.icon {
+    color: var(--maroon);
+    font-size: 30px;
+    padding: 15px;
+}
+.icon:hover {
+    color: #fff;
+    cursor: pointer;
 }
