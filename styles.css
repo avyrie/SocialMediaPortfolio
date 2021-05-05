@@ -1,12 +1,15 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: 'Dosis', sans-serif;
 }
 
 :root {
     --gold: rgb(221, 182, 52);
     --maroon: rgb(113, 2, 2);
+    --pink: #f7c7d2;
+    --grey: rgb(97, 92, 92);
     
 }
 
@@ -28,7 +31,7 @@ nav {
     top: 0;
     height: 120px;
     width: 100%;
-    background-color: #f7c7d2;
+    background-color: var(--pink);
     z-index: 2;
     overflow: hidden;
 }
@@ -41,7 +44,7 @@ footer {
     bottom: 0;
     height: 120px;
     width: 100%;
-    background-color: #f7c7d2;
+    background-color:var(--pink);
     z-index: 2;
     overflow: hidden;
     margin-top: 50px;
@@ -68,7 +71,7 @@ a:hover {
     text-decoration: none;
 }
 li:hover {
-    color: white;
+    color: #fff;
 }
 
 li {
@@ -76,7 +79,7 @@ li {
     font-family: 'Dosis', sans-serif;
     font-size: 2rem;
     padding: 10px;
-    color: rgb(97, 92, 92);
+    color: var(--grey);
 }
 
 main {
@@ -103,7 +106,7 @@ main {
     align-items: center;  
     margin-top: 10vh;
     z-index: 2;
-    color: rgb(113, 2, 2);
+    color: var(--maroon);
 }
 #title h1 {
     font-size: 65px;
@@ -179,4 +182,72 @@ h1, h2 {
 
 .links:hover {
     color: var(--gold);
+}
+
+/* Contact Form  */
+
+form {
+   max-width: 600px;
+   text-align: center;
+   margin: 20px auto;
+}
+
+input, textarea {
+    border:0; 
+    outline:0;
+    padding: 1em;
+    border-radius: (8px);
+    display: block;
+    width: 100%;
+    margin-top: 1em;
+    font-family: 'Merriweather', sans-serif;
+    box-shadow: (10px 5px 5px rgba(black, 0.1));
+    resize: none;
+}
+  
+#input-submit {
+    color: var(--grey); 
+    background-color: var(--pink);
+    cursor: pointer;
+}
+#input-submit:hover {
+    background: var(--gold);
+    color: #fff;
+}
+  
+textarea {
+    height: 126px;
+}
+
+.half {
+  float: left;
+  width: 48%;
+  margin-bottom: 1em;
+}
+
+.right { width: 50%; }
+
+.left {
+     margin-right: 2%; 
+}
+
+
+@media (max-width: 480px) {
+  .half {
+     width: 100%; 
+     float: none;
+     margin-bottom: 0; 
+  }
+}
+
+
+/* Clearfix */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
 }
